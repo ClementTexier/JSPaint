@@ -1,0 +1,13 @@
+h1 {
+    font-family:    Verdana;
+    color:          cornflowerblue;
+    text-align:     center;
+}
+html, body {
+    width:          90%;
+    height:         90%;
+}
+#sketch {
+    border:         1px solid black;
+    height:         90%;
+}
