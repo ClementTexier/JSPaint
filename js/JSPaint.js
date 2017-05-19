@@ -3,17 +3,27 @@
  */
 var canvas          = document.querySelector('#drawing-area');
 var ctx             = canvas.getContext('2d');
-
 var sketch          = document.querySelector('#sketch');
 var sketch_style    = getComputedStyle(sketch);
 canvas.width        = parseInt(sketch_style.getPropertyValue('width'));
 canvas.height       = parseInt(sketch_style.getPropertyValue('height'));
-ctx.lineWidth       = 5;
-ctx.lineJoin        = 'round';
-ctx.lineCap         = 'round';
-ctx.strokeStyle     = 'blue';
 
 var mouse           = {x: 0, y: 0};
+
+function setDefaultBrush() {
+    ctx.lineWidth   = 1;
+    ctx.lineJoin    = 'round';
+    ctx.lineCap     = 'round';
+    ctx.strokeStyle = 'black';
+}
+
+function getColor(element) {
+    return (element.style.backgroundColor);
+}
+
+function setColor(color) {
+    ctx.strokeStyle = getColor(color);
+}
 
 canvas.addEventListener('mousemove', function(e) {
     mouse.x = e.pageX - this.offsetLeft;
@@ -30,6 +40,10 @@ canvas.addEventListener('mousedown', function(e) {
 canvas.addEventListener('mouseup', function() {
     canvas.removeEventListener('mousemove', onPaint, false);
 }, false);
+
+canvas.addEventListener('mouseleave', function() {
+    canvas.removeEventListener('mousemove', onPaint, false);
+});
 
 var onPaint = function() {
     ctx.lineTo(mouse.x, mouse.y);

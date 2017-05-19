@@ -3,11 +3,46 @@ h1 {
     color:          cornflowerblue;
     text-align:     center;
 }
-html, body {
-    width:          90%;
-    height:         90%;
+
+#tools h3{
+    text-align:     center;
+    font-family:    Verdana;
 }
+
+html, body {
+    width:          99%;
+    height:         95%;
+}
+
+#color {
+    width:          15%;
+    margin-left:    3.3%;
+    margin-bottom:  2%;
+    border:         1px solid black;
+    float:          left;
+}
+
+#box {
+    content: "";
+    padding-top: 100%;
+    display: block;
+}
+
 #sketch {
     border:         1px solid black;
-    height:         90%;
+    height:         100%;
+    width:          87%;
+    float:          left;
+}
+
+#wrapper {
+    height:         100%;
+    width:          100%;
+}
+
+#tools {
+    width:          12%;
+    height:         100%;
+    border:         solid 1px black;
+    float:          right;
 }

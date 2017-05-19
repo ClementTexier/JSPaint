@@ -5,10 +5,45 @@
     <title>JSPaint</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body onload="setDefaultBrush()">
     <h1>Welcome to JSPaint!</h1>
-    <div id="sketch">
-        <canvas id="drawing-area"></canvas>
+    <div id="wrapper">
+        <div id="sketch">
+            <canvas id="drawing-area"></canvas>
+        </div>
+        <div id="tools">
+            <h3>Toolbox</h3>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: red;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: orange;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: yellow;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: green;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: black;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: pink;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: purple;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: blue;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: lime;"></div>
+            </div>
+            <div id="color">
+                <div id="box" onclick="setColor(this)" style="background-color: white;"></div>
+            </div>
+        </div>
     </div>
 </body>
 <footer>
