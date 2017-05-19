@@ -8,6 +8,10 @@ var sketch          = document.querySelector('#sketch');
 var sketch_style    = getComputedStyle(sketch);
 canvas.width        = parseInt(sketch_style.getPropertyValue('width'));
 canvas.height       = parseInt(sketch_style.getPropertyValue('height'));
+ctx.lineWidth       = 5;
+ctx.lineJoin        = 'round';
+ctx.lineCap         = 'round';
+ctx.strokeStyle     = 'blue';
 
 var mouse           = {x: 0, y: 0};
 
@@ -15,11 +19,6 @@ canvas.addEventListener('mousemove', function(e) {
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;
 }, false);
-
-ctx.lineWidth   = 5;
-ctx.lineJoin    = 'round';
-ctx.lineCap     = 'round';
-ctx.strokeStyle = 'blue';
 
 canvas.addEventListener('mousedown', function(e) {
     ctx.beginPath();
