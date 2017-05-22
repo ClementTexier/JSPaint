@@ -25,6 +25,10 @@ function setColor(color) {
     ctx.strokeStyle = getColor(color);
 }
 
+function resetDrawing(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 canvas.addEventListener('mousemove', function(e) {
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;

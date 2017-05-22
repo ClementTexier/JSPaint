@@ -4,15 +4,17 @@ A drawing app made in JS
 
 # Work in progress
 
-This project is currently paused. I was coding it in order to learn how to use JavaScript better. I need a customcolor
-selector in order to ensure IE and Edge support, and I don't want to use one that can be found on the internet.I will
-continue this project once my homemade color selector will be done. The color selector will also be uploaded on GitHub.
+I finaly decided to use a JS script in order to have a custom color picker (jscolor.com).
+I tried to find a way to code this myself for several days now, and I still can't figure
+how to do this. The script I use is not part of this git project, so If you want to install
+this project, make sure to download the JS script from it's website, and place it in the "js"
+folder.
 
 ## Coming soon
 
 -Smoother lines
 
--Color palette + custom color picker
+-Working custom color picker
 
 -More tools
 
