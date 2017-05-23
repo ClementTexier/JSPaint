@@ -22,11 +22,22 @@ function getColor(element) {
 }
 
 function setColor(color) {
-    ctx.strokeStyle = getColor(color);
+    ctx.strokeStyle = color;
+    console.log(rgb2hex(color));
+    document.getElementById('custom-color').value = rgb2hex(color).substring(1,7).toUpperCase();
+    document.getElementById('box-current').style.backgroundColor = color;
 }
 
 function resetDrawing(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function rgb2hex(rgb){
+    rgb = rgb.match(/^rgb?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+    return (rgb && rgb.length === 4) ? "#" +
+        ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+        ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+        ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
 }
 
 canvas.addEventListener('mousemove', function(e) {

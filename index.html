@@ -14,36 +14,40 @@
         <div id="tools">
             <h3>Toolbox</h3>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: red;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #FF0000;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: orange;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #FFA500;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: yellow;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #FFFF00;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: green;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #008000;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: black;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #000000;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: pink;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #FFC0CB;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: purple;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #800080;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: blue;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #0000FF;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: lime;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #00FF00;"></div>
             </div>
             <div id="color">
-                <div id="box" onclick="setColor(this)" style="background-color: white;"></div>
+                <div id="box" onclick="setColor(getColor(this))" style="background-color: #FFFFFF;"></div>
             </div>
-            <input class="jscolor" id="custom-color" value="000000">
+            <div id="current-color">
+                current color
+                <div id="box-current" style="background-color: #000000"></div>
+            </div>
+            <input class="jscolor" id="custom-color" value="000000" onblur="setColor('#'+this.value)">
             <button id="clean-all" onclick="resetDrawing()">Reset</button>
         </div>
     </div>

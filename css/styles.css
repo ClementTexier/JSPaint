@@ -5,8 +5,8 @@ h1 {
 }
 
 #tools h3{
-    text-align:     center;
     font-family:    Verdana;
+    text-align:     center;
 }
 
 html, body {
@@ -16,23 +16,42 @@ html, body {
 
 #color {
     width:          15%;
-    margin-left:    3.3%;
-    margin-bottom:  2%;
-    border:         1px solid black;
+    margin-left:    4%;
+    margin-bottom:  3%;
     float:          left;
+}
+
+#current-color {
+    font-family:    Verdana;
+    font-size:      85%;
+    width:          60%;
+    margin-left:    20%;
+    margin-top:     50%;
+    margin-bottom:  3%;
+    text-align:     center;
+}
+
+#box-current{
+    content:        "";
+    padding-top:    50%;
+    box-shadow:     0 0 5px #000000;
+    border-radius:  3px;
 }
 
 #box {
     content:        "";
     padding-top:    100%;
     display:        block;
+    box-shadow:     0 0 5px #000000;
+    border-radius:  5px;
 }
 
 #sketch {
-    border:         1px solid black;
     height:         100%;
     width:          87%;
     float:          left;
+    box-shadow:     0 0 5px #000000;
+    border-radius:  7px;
 }
 
 #wrapper {
@@ -43,8 +62,9 @@ html, body {
 #tools {
     width:          12%;
     height:         100%;
-    border:         solid 1px black;
     float:          right;
+    border-radius:  7px;
+    box-shadow:     0 0 5px #000000;
 }
 
 #custom-color {
