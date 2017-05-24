@@ -21,11 +21,20 @@ function getColor(element) {
     return (element.style.backgroundColor);
 }
 
+function changeBrushWidth() {
+    var newWidth    = document.getElementById('brush-size').value;
+    ctx.lineWidth   = newWidth;
+    document.getElementById('brushWidthLabel').innerHTML = newWidth;
+}
+
 function setColor(color) {
     ctx.strokeStyle = color;
     console.log(rgb2hex(color));
-    document.getElementById('custom-color').value = rgb2hex(color).substring(1,7).toUpperCase();
+    customColor = document.getElementById('custom-color');
+    customColor.value = rgb2hex(color).substring(1,7).toUpperCase();
+    customColor.style.backgroundColor = color;
     document.getElementById('box-current').style.backgroundColor = color;
+
 }
 
 function resetDrawing(){

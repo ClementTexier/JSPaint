@@ -47,6 +47,12 @@
                 current color
                 <div id="box-current" style="background-color: #000000"></div>
             </div>
+            <div style="text-align: center">
+                <label id="sizeLabel">brush size<input type="range" id="brush-size" min="0" max="10" step="1" value="1" oninput="changeBrushWidth()"></label>
+            </div>
+            <div id="brushWidthLabel">
+                1
+            </div>
             <input class="jscolor" id="custom-color" value="000000" onblur="setColor('#'+this.value)">
             <button id="clean-all" onclick="resetDrawing()">Reset</button>
         </div>
